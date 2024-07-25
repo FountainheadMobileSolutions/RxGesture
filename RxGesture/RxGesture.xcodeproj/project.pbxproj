@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5587DB412C5313E6001E07D4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5587DB402C5313E6001E07D4 /* RxSwift */; };
+		5587DB432C531448001E07D4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 5587DB422C531448001E07D4 /* RxCocoa */; };
+		5587DB452C531448001E07D4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 5587DB442C531448001E07D4 /* RxRelay */; };
 		75C1D752260A9273004B84DF /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0A260A920E00F14013 /* RxSwift.xcframework */; };
 		75C1D753260A9273004B84DF /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0C260A920E00F14013 /* RxCocoa.xcframework */; };
 		75C1D754260A9273004B84DF /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0B260A920E00F14013 /* RxRelay.xcframework */; };
@@ -14,11 +17,8 @@
 		75C1D756260A9273004B84DF /* RxTest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0D260A920E00F14013 /* RxTest.xcframework */; };
 		75FDEE01260A8E2500F14013 /* GenericRxGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177B1E4FED3900A65547 /* GenericRxGestureRecognizerDelegate.swift */; };
 		75FDEE05260A8E2600F14013 /* GenericRxGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177B1E4FED3900A65547 /* GenericRxGestureRecognizerDelegate.swift */; };
-		75FDEE10260A920E00F14013 /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0A260A920E00F14013 /* RxSwift.xcframework */; };
 		75FDEE11260A920E00F14013 /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0A260A920E00F14013 /* RxSwift.xcframework */; };
-		75FDEE12260A920E00F14013 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0B260A920E00F14013 /* RxRelay.xcframework */; };
 		75FDEE13260A920E00F14013 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0B260A920E00F14013 /* RxRelay.xcframework */; };
-		75FDEE14260A920E00F14013 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0C260A920E00F14013 /* RxCocoa.xcframework */; };
 		75FDEE15260A920E00F14013 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FDEE0C260A920E00F14013 /* RxCocoa.xcframework */; };
 		874DD3DD1FAD067200A61D4F /* GestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874DD3DC1FAD067200A61D4F /* GestureRecognizer+RxGesture.swift */; };
 		874DD3DE1FAD067200A61D4F /* GestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874DD3DC1FAD067200A61D4F /* GestureRecognizer+RxGesture.swift */; };
@@ -131,9 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75FDEE14260A920E00F14013 /* RxCocoa.xcframework in Frameworks */,
-				75FDEE10260A920E00F14013 /* RxSwift.xcframework in Frameworks */,
-				75FDEE12260A920E00F14013 /* RxRelay.xcframework in Frameworks */,
+				5587DB432C531448001E07D4 /* RxCocoa in Frameworks */,
+				5587DB412C5313E6001E07D4 /* RxSwift in Frameworks */,
+				5587DB452C531448001E07D4 /* RxRelay in Frameworks */,
 				F4CC4C571DEBAF98009ED835 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +312,11 @@
 			dependencies = (
 			);
 			name = "RxGesture-iOS";
+			packageProductDependencies = (
+				5587DB402C5313E6001E07D4 /* RxSwift */,
+				5587DB422C531448001E07D4 /* RxCocoa */,
+				5587DB442C531448001E07D4 /* RxRelay */,
+			);
 			productName = RxGesture;
 			productReference = F4CC4C1D1DEBA895009ED835 /* RxGesture.framework */;
 			productType = "com.apple.product-type.framework";
@@ -352,6 +357,9 @@
 				Base,
 			);
 			mainGroup = F4CC4C131DEBA895009ED835;
+			packageReferences = (
+				5587DB3F2C5313E6001E07D4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = F4CC4C1E1DEBA895009ED835 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -814,6 +822,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5587DB3F2C5313E6001E07D4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FountainheadMobileSolutions/RxSwift.git";
+			requirement = {
+				branch = topic/xcode16;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5587DB402C5313E6001E07D4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5587DB3F2C5313E6001E07D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		5587DB422C531448001E07D4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5587DB3F2C5313E6001E07D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		5587DB442C531448001E07D4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5587DB3F2C5313E6001E07D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4CC4C141DEBA895009ED835 /* Project object */;
 }
