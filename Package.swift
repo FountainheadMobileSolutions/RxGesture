@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "RxGesture", targets: ["RxGesture"])
     ],
     dependencies: [
-        .package(url: "https://github.com/FountainheadMobileSolutions/RxSwift.git", branch: "topic/xcode16"),
+        .package(url: "https://github.com/FountainheadMobileSolutions/RxSwift.git", .upToNextMajor(from: "6.8.0")),
     ],
     targets: [
         .target(
