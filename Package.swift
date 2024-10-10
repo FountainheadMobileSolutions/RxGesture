@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "RxGesture",
-    platforms: [.iOS(.v12), .macOS(.v12), .watchOS(.v4), .tvOS(.v12)],
+    platforms: [.iOS(.v12), .macOS(.v13), .watchOS(.v4), .tvOS(.v12)],
     products: [
         .library(name: "RxGesture", targets: ["RxGesture"])
     ],
